@@ -1,4 +1,7 @@
-package sma;
+package sma.WolfSheep;
+
+import sma.Abstract.Agent;
+import sma.Abstract.Environment;
 
 import java.util.List;
 

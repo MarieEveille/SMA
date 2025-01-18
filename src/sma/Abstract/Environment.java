@@ -1,4 +1,6 @@
-package sma;
+package sma.Abstract;
+
+import sma.Abstract.Agent;
 
 import java.util.List;
 

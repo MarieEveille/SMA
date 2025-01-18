@@ -1,6 +1,4 @@
-package sma;
-
-import java.util.Random;
+package sma.Abstract;
 
 public abstract class Agent {
     protected int x;

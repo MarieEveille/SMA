@@ -1,5 +1,9 @@
 package sma;
 
+import sma.Abstract.Agent;
+import sma.Abstract.Environment;
+import sma.Abstract.Scheduler;
+
 public class BasicScheduler extends Scheduler {
 
     public BasicScheduler(Environment env, int nbTicks) {

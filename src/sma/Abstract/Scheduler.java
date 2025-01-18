@@ -1,4 +1,6 @@
-package sma;
+package sma.Abstract;
+
+import sma.Abstract.Environment;
 
 /**
  * Gère l'ordonnancement (le "tour par tour") de la simulation.
