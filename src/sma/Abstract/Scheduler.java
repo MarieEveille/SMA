@@ -2,11 +2,7 @@ package sma.Abstract;
 
 import sma.Abstract.Environment;
 
-/**
- * Gère l'ordonnancement (le "tour par tour") de la simulation.
- * C'est un squelette : à vous d'implémenter comment l'ordonnancement est fait
- * (ordonnancement centralisé, parallèle, pseudo-aléatoire, etc.).
- */
+
 public abstract class Scheduler {
 
     protected Environment environment;
@@ -17,9 +13,5 @@ public abstract class Scheduler {
         this.nbTicks = nbTicks;
     }
 
-    /**
-     * Boucle principale de simulation.
-     * Les classes concrètes décideront comment elles font tourner le système (ordre des agents, etc.).
-     */
     public abstract void runSimulation();
 }

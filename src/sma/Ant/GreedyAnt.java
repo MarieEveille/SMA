@@ -5,10 +5,7 @@ import sma.Abstract.Environment;
 
 import java.util.List;
 
-/**
- * Une fourmi qui cherche activement la nourriture la plus proche
- * et la ramasse quand elle arrive dessus.
- */
+
 public class GreedyAnt extends Agent {
 
     public GreedyAnt(int x, int y) {
@@ -22,17 +19,14 @@ public class GreedyAnt extends Agent {
         }
         AntFoodEnvironment afe = (AntFoodEnvironment) env;
 
-        // 1. Trouver la nourriture la plus proche
         int[] closestFoodPos = findClosestFood(afe);
         if (closestFoodPos == null) {
-            // Aucune nourriture : on ne bouge pas
             return;
         }
 
         int fx = closestFoodPos[0];
         int fy = closestFoodPos[1];
 
-        // 2. Se déplacer d'une case vers la nourriture
         int dx = Integer.compare(fx, this.x);
         int dy = Integer.compare(fy, this.y);
 
@@ -42,14 +36,12 @@ public class GreedyAnt extends Agent {
         if (afe.isValidPosition(newX, newY)) {
             setPosition(newX, newY);
 
-            // Si on arrive sur la nourriture, on la ramasse
             if (afe.hasFoodAt(newX, newY)) {
                 afe.pickupFoodAt(newX, newY);
             }
         }
     }
 
-    // Recherche de la case de nourriture la plus proche
     private int[] findClosestFood(AntFoodEnvironment afe) {
         double minDist = Double.MAX_VALUE;
         int[] result = null;
